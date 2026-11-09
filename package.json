@@ -1,0 +1,13 @@
+{
+  "name": "snaptok",
+  "version": "1.0.0",
+  "description": "TikTok video downloader without watermark",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
