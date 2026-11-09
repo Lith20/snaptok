@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>SnapTok - تنزيل فيديوهات TikTok بدون علامة مائية</title>
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="حمّل فيديوهات TikTok بدون علامة مائية، مجاناً وبأعلى جودة.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- الشعار -->
+  <div class="logo">
+    <div class="logo-icon">🎵</div>
+    <h1>SnapTok</h1>
+  </div>
+  <p class="subtitle">حمّل فيديوهات TikTok بدون علامة مائية - مجاناً</p>
+
+  <!-- بطاقة الإدخال -->
+  <div class="card">
+    <div class="input-wrap">
+      <input 
+        type="url" 
+        id="urlInput" 
+        placeholder="الصق رابط TikTok هنا..."
+        inputmode="url"
+        autocomplete="off"
+      >
+      <button class="btn" id="downloadBtn">تحميل الفيديو</button>
+      <button class="btn btn-paste" id="pasteBtn">📋 لصق من الحافظة</button>
+    </div>
+  </div>
+
+  <!-- الحالة والنتيجة -->
+  <div id="status" class="hidden"></div>
+  <div id="result" class="hidden"></div>
+
+  <!-- التنبيه -->
+  <div class="notice">
+    ⚠️ أقصى جودة متاحة هي 1080P بترميز TikTok. الحسابات الخاصة غير مدعومة.
+  </div>
+
+  <div class="footer">
+    SnapTok © 2025 · غير مرتبط رسمياً بـ TikTok
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
