@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, sans-serif;
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px 16px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== الشعار ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 8px;
+}
+
+.logo-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #25F4EE 0%, #FE2C55 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+/* ===== البطاقات ===== */
+.card {
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 16px;
+}
+
+.input-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input[type="url"] {
+  width: 100%;
+  padding: 16px;
+  background: #0a0a0a;
+  border: 1.5px solid #2a2a2a;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+input[type="url"]:focus {
+  outline: none;
+  border-color: #FE2C55;
+}
+
+input[type="url"]::placeholder {
+  color: #555;
+}
+
+/* ===== الأزرار ===== */
+.btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #FE2C55 0%, #ff4d6d 100%);
+  border: none;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s, opacity 0.2s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-paste {
+  background: #2a2a2a;
+  color: #fff;
+  padding: 12px;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* ===== الحالة ===== */
+#status {
+  text-align: center;
+  padding: 16px;
+  font-size: 15px;
+  color: #aaa;
+  max-width: 480px;
+  width: 100%;
+}
+
+#status.error {
+  color: #ff6b6b;
+}
+
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #333;
+  border-top-color: #FE2C55;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===== بطاقة النتيجة ===== */
+.result-card {
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 20px;
+  padding: 16px;
+  width: 100%;
+  max-width: 480px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.video-preview {
+  width: 100%;
+  border-radius: 14px;
+  background: #000;
+  margin-bottom: 14px;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #2a2a2a;
+  object-fit: cover;
+}
+
+.author-name {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.author-role {
+  color: #888;
+  font-size: 12px;
+}
+
+.title-text {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: #888;
+}
+
+/* ===== أزرار التنزيل ===== */
+.download-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dl-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: #0a0a0a;
+  border: 1.5px solid #2a2a2a;
+  border-radius: 14px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.dl-btn:active {
+  background: #1a1a1a;
+  border-color: #FE2C55;
+}
+
+.dl-btn .icon { font-size: 20px; }
+.dl-btn .label { flex: 1; text-align: right; margin-right: 12px; }
+.dl-btn .arrow { color: #FE2C55; font-size: 18px; }
+
+/* ===== التنبيه والفوتر ===== */
+.notice {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 12px;
+  color: #888;
+  max-width: 480px;
+  width: 100%;
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+.footer {
+  color: #444;
+  font-size: 12px;
+  text-align: center;
+  margin-top: auto;
+  padding-top: 40px;
+}
+
+/* ===== الأدوات ===== */
+.hidden {
+  display: none !important;
+}
